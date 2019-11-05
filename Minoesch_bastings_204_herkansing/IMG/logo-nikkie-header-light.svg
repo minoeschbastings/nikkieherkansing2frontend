@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="225px" height="32px" viewBox="0 0 225 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-848.000000, -68.000000)" fill="#ffffff">
+            <g id="Page-1" transform="translate(848.000000, 68.000000)">
+                <polygon id="Fill-1" points="22.4466454 0 22.4466454 22.1255675 5.23304875 0 0 0 0 32 5.55446388 32 5.55446388 9.23364809 23.2725076 32 28 32 28 0"></polygon>
+                <polygon id="Fill-2" points="49 32 54 32 54 0 49 0"></polygon>
+                <polygon id="Fill-3" points="95.592978 0 80.5543797 16.0911461 80.5543797 0 75 0 75 32 80.5543797 32 80.5543797 22.7199503 85.4773877 17.5997514 96.2704612 32 103 32 89.2708023 13.7600166 102.412557 0"></polygon>
+                <polygon id="Fill-4" points="145.59305 0 130.55378 16.0911461 130.55378 0 125 0 125 32 130.55378 32 130.55378 22.7199503 135.477286 17.5997514 146.270527 32 153 32 139.270663 13.7600166 152.412017 0"></polygon>
+                <polygon id="Fill-5" points="173 32 178 32 178 0 173 0"></polygon>
+                <polygon id="Fill-6" points="201 0 201 32 225 32 225 26.9709472 206.63389 26.9709472 206.63389 18.3775311 222.710359 18.3775311 222.710359 13.3482021 206.63389 13.3482021 206.63389 5.0273956 224.771977 5.0273956 224.771977 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

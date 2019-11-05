@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Deze div omvangt de nav en het logo om te zorgen dat er bij :hover een achtergrond kleur komt (Zie css regel 359) -->
+        <div>
+            <img src="IMG/logo-nikkie-header-light.svg">
+            <nav>
+
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <ul>
+
+                    <li>
+                        <a href="#"> WHAT'S NEW</a>
+                    </li>
+
+                    <li>
+                        <a href="#">COLLECTION</a>
+                    </li>
+
+                    <li>
+                        <a href="#">SALE</a>
+                    </li>
+
+                    <li>
+                        <a href="#">TV</a>
+                    </li>
+
+                    <li>
+                        <a href="#">KATE MOSS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">INSTASHOP</a>
+                    </li>
+
+                    <li>
+                        <a href="#">JOBS</a>
+                    </li>
+
+                    <li>
+                        <a href="#">MERKEN</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+    </header>
+
+    <main>
+
+        <img src="IMG/bannernikkiinconcert.png" alt="banner nikkie">
+
+        <section>
+            <img src="IMG/nikkieriem.jpg" alt="Nikkie riem">
+            <a href="./detail.html"> SHOP RIEM </a>
+        </section>
+
+        <div>
+            <img src="IMG/nikkiecollectie1.png" alt="collectie item 1 nikkie">
+            <img src="IMG/nikkiecollectie2.png" alt="collectie item 2 nikkie">
+        </div>
+
+
+        <!-- Hier begint het article met daarin een formulier opgesteld uit een p met daarin wat informatie over het formulier, checkboxes die alleen op de desktop versie te zien zijn, een input veld voor de gebruiker om zijn e-mail adres in te vullen met daarbij een placeholder in het input veld en een sign up button. (Zie css regel 212) -->
+
+        <!-- Bron - https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+        :voor de checkboxes op mobile version -->
+
+        <article>
+            <form>
+                <p> NEWSLETTER SIGN-UP </p>
+
+                <p> Sign up for email updates on the latest collections, campaigns and videos.</p>
+
+
+                <label> NIKKIE
+                    <input type="checkbox">
+                </label>
+
+                <label>NIK & NIK
+                    <input type="checkbox">
+                </label>
+
+                <label>FIFTH HOUSE
+                    <input type="checkbox">
+                </label>
+
+                <label>SUSTAIN
+                    <input type="checkbox">
+                </label>
+
+                <label>N-BRANDS
+                    <input type="checkbox">
+                </label>
+
+                <input type="text" email="email" placeholder="Your e-mail">
+
+                <button> SIGN UP </button>
+            </form>
+        </article>
+    </main>
+
+    <!-- Hier begint de footer. Hierin zijn vier divjes met daarin "columns" te vinden met linkjes. Ook vind je hier een section met daarin de payment afbeeldingen aangeroepen met <img src="..". Eerst had ik deze divjes een class gegeven en deze met . aangeroepen in mijn css. Dit bleek echter niet nodig en deze heb ik aangepast in de css naar: footer div div (Zie css regel 261) -->
+
+    <!-- - https://www.w3schools.com/howto/howto_css_three_columns.asp
+   :voor de columns onder in de footer-->
+
+    <footer>
+        <div>
+            <div>
+                <h2>CONTACT</h2>
+                <p>HONTHORSTSTRAAT 3</p>
+                <p>1071 DC AMSTERDAM</p>
+                <p>NEDERLAND</p>
+                <a>WEBSHOP@NIKKIE.NL</a>
+                <a>+31 88 5062822</a>
+            </div>
+
+            <div>
+                <h2>KLANTENSERVICE</h2>
+                <a>BESTELLEN</a>
+                <a>BETALEN</a>
+                <a>LEVERING</a>
+                <a>RETOUNEREN</a>
+            </div>
+
+            <div>
+                <h2>INFORMATIE</h2>
+                <a>OVER NIKKIE</a>
+                <a>CONTACT</a>
+                <a>WERKEN BIJ NP FASHION</a>
+                <a>ALGEMENE VOORWAARDEN</a>
+                <a>STORE LOCATOR</a>
+            </div>
+
+            <div>
+                <h2>VOLG ONS OP</h2>
+                <a>INSTAGRAM</a>
+                <a>FACEBOOK</a>
+            </div>
+        </div>
+
+        <section>
+            <img src="IMG/ideal.png" alt="Ideal betalen logo">
+            <img src="IMG/paypal.png" alt="Paypal betalen logo">
+            <img src="IMG/yourgift.png" alt="Yourgift betalen logo">
+            <img src="IMG/fashiongiftcard.png" alt="Fashiongiftcard logo">
+            <img src="IMG/achterafbetalen.png" alt="Achteraf betalen logo">
+            <img src="IMG/americanexpress.png" alt="Americanexpress betalen logo">
+            <img src="IMG/vvv.png" alt="VVV logo">
+            <img src="IMG/bancontant.png" alt=" Bancontact logo">
+            <img src="IMG/sofort.png" alt="Sofort logo">
+            <img src="IMG/giropay.png" alt="Giropay logo">
+            <img src="IMG/creditcard.png" alt=" Creditcard betalen logo">
+            <img src="IMG/staticpay.png" alt=" Staticpay betalen logo">
+            <img src="IMG/fc.png" alt="fc betalen logo">
+            <img src="IMG/webshopkeurmerk.png" alt="Webshopkeurmerk logo">
+        </section>
+
+        <a>Terms and Conditions</a>
+        <a>Privacy Statement</a>
+        <a>Disclaimer</a>
+        <p>© NIKKIE 2019</p>
+
+    </footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

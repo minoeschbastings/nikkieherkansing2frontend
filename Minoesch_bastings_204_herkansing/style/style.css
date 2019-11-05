@@ -1,0 +1,556 @@
+nav ul {
+    display: block;
+    list-style-type: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5;
+    margin: 0;
+    text-align: left;
+}
+
+nav ul li a {
+    text-align: center;
+    padding: 0, 5rem;
+    margin-top 12px;
+    text-decoration: none;
+    font-family: omnes;
+    font-size: 12px
+}
+
+/*
+ * Dit is de mobile nav die standaard verborgen staat.
+ */
+nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+    padding: 0 20px;
+}
+
+
+/* Li op mobiel verder uit elkaar verticaal */
+nav > ul li {
+    padding: 10px 0;
+}
+
+nav > ul li a {
+    color: white;
+    font-size: 16px;
+}
+
+/* De a'tjes worden grijs zodra je erover heen hovert */
+nav > ul li a:hover {
+    color: gray;
+}
+
+/* De a'tjes worden goud zodra je er op klikt */
+nav > ul li a:active {
+    color: darkgoldenrod;
+}
+
+
+/* Hier begint de hamburger.
+Doordat dit element relative is, moeten de 'absolute'  stokjes naar de breedte en hoogte van dit element luisteren.
+*/
+nav > div {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    margin-left: 20px
+}
+
+nav > div:hover {
+    cursor: pointer;
+}
+
+/* Deze style heeft ieder van de streepjes in het hamburger menu. */
+
+nav > div div {
+    transition: .5s;
+    position: absolute;
+    width: 22px;
+    border-bottom: 2px solid white;
+}
+
+/* Dit gaat over de streepjes apart in het hamburger menu */
+
+nav > div div:nth-child(1) {
+    top: 0;
+}
+
+nav > div div:nth-child(2) {
+    top: 33%;
+}
+
+nav > div div:nth-child(3) {
+    top: 66%;
+}
+
+nav ul.active {
+    max-height: 1000px;
+}
+
+nav > div.active div:nth-child(2) {
+    border: none;
+}
+
+nav > div.active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 33%;
+    width: 25px;
+    height: 2px;
+}
+
+nav > div.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 33%;
+    width: 25px;
+    height: 2px;
+}
+
+/* Hier eindigt de hamburger */
+
+header {
+    background: url("../IMG/achtergrond.jpeg");
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    margin-top: 0px;
+}
+
+/* Dit is het logo "nikkie". Deze selector selecteert alleen de direct child van de div in de header.*/
+
+header > div > img {
+    display: block;
+    max-width: 120px;
+}
+
+/* Wanneer het mobiele menu uit is geklapt, gaat de afbeelding weg */
+header > div.inactive > img {
+    display: none;
+}
+
+/* Op mobiel moet de hamburger links van het logo staan en daarvoor moet de volgorde van de twee elementen omgedraaid worden met row-reverse.
+
+Doordat de row-reversed is, zijn flex-end en flex-start ook omgedraaid, om het dus links uit te lijnen moet flex-end worden gebruikt.
+*/
+
+header > div {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Wanneer het mobiele menu uit is geklapt, verandert de div die eromheen zit weer terug naar flex-direction row, en daardoor moet de content met justify weer naar start in plaats van end */
+
+header > div.inactive {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+body {
+    background-size: cover;
+    height: 10px;
+    margin-top: 0px;
+    overflow-x: hidden;
+}
+
+/* Dit gaat over de afbeeldingen van de Nikkie riem */
+
+main img {
+    width: 100%;
+}
+
+/* Vanaf hier gaat het over de gehele section in de main waar de afbeelding van de Nikkie riem in staat */
+
+main section:nth-child(2) {
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: white;
+    color: white
+}
+
+main section:nth-child(2) img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+main section:nth-child(2) button {
+    width: 200px;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    background-color: #232323;
+    font-size: 15px;
+}
+
+main section a {
+    margin-left: 12em;
+}
+
+main section dl {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: omnes;
+    text-align: center;
+}
+
+main section dd {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: omnes;
+    text-align: center;
+}
+
+/* Dit gaat over de twee naast elkaar gepositioneerde afbeeldingen van Nikkie */
+
+main div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+/* Hier begint het article met daarin het formulier met een inputveld voor het e-mail adres en de sign-sup button*/
+
+article {
+    padding: 55px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 13px;
+    color: white;
+}
+
+/* Inputveld voor het e-mail adres */
+
+input[type="text"] {
+    margin-left: 7em;
+    margin-right: 0;
+    background-color: #232323;
+    padding: 8px 6px;
+    width: 20em;
+    font-size: 12px;
+}
+
+/* Sign-Up button */
+
+form button {
+    padding: 10px 0;
+    width: 8em;
+    font-size: 11px;
+    background-color: white;
+    color: #232323;
+    font-size: 12px;
+    border: solid black 0px;
+}
+
+/* Display none op het label zorgt ervoor dat de checkboxes niet zullen worden weergegeven op mobile version*/
+
+label {
+    display: none;
+}
+
+/* Hier eindigt het formulier met het inputveld voor het e-mail adres en de sign-sup button*/
+
+/* Dit gaat over 4 rijtjes met columns in de footer*/
+
+* {
+    box-sizing: border-box;
+}
+
+main section h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+footer div div {
+    float: left;
+    width: 29em;
+    padding: 10px;
+    height: 300px;
+    display: inline-block;
+    align-items: center;
+}
+
+footer div div a {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Dit gaat over de h2'tjes binnen in de div in de footer*/
+
+footer div h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: white;
+    padding: 40px 0;
+}
+
+/* Dit gaat over de a'tjes in de footer*/
+
+footer a {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Dit gaat over de payment images in de footer*/
+
+footer img {
+    width: 30px;
+    margin: 0 1em;
+}
+
+
+/* Dit zorgt ervoor dat de section in de footer waar de imgages in zitten nu gecentreerd staat*/
+
+footer section {
+    margin-left: 30px;
+    padding-top: 0em;
+    justify-content: center;
+}
+
+
+/* Dit gaat over alle p'tjes in de footer*/
+footer p {
+    text-align: center;
+    font-size: 13px;
+    color: #232323;
+}
+
+/* responsive desktop:..................................................*/
+
+@media screen and (min-width:1024px) {
+    header {
+        height: 110vh;
+    }
+
+    /* Dit is de desktop nav en deze word nu altijd weergegeven.*/
+
+    nav {
+        display: block;
+    }
+
+    /* De Hamburger verdwijnt op desktop */
+    nav > div {
+        display: none;
+    }
+
+    nav > ul {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 200px;
+    }
+
+    nav > ul li a {
+        padding: 5px 0;
+        font-size: 18px;
+        color: white;
+        transition: color 0.3s;
+    }
+
+    /* :hover is een Css selector en zorgt ervoor dat als je over de a'tjes in de nav hovert deze van wit naar grijs veranderen */
+
+    nav > ul li a:hover {
+        color: gray;
+    }
+
+    /* :active is ook een Css selector en zorgt er hier voor dat als je op een van de a'tjes in de Nav klikt, deze van wit naar goud veranderd. Het geeft de gebruiker dus feedback dat deze "actief" bezig is met de <a> door erop te klikken */
+
+    nav > ul li a:active {
+        color: darkgoldenrod;
+    }
+
+    /* Hier heb ik de div in de header transparant gemaakt om hem vervolgens een Css selector :hover te geven. Deze div is dus strandaard transparant maar zodra er over heen word gehoverd word deze donkergrijs. */
+
+    header > div {
+        background-color: transparent;
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    header > div:hover {
+        background-color: #1a1a1a;
+    }
+
+    /* Hier heb ik de afbeelding van het logo van Nikkie gestyled. Deze bevind zich dus in de header in een div. */
+
+    header > div > img {
+        margin: 0 auto;
+        padding: 20px 0;
+        max-width: 200px;
+    }
+
+    /* Hier begint het formulier met het inputveld voor het e-mail adres en de sign-sup button*/
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px 20px;
+    }
+
+    /* Inputveld voor het e-mail adres */
+
+    input[type="text"] {
+        margin-left: 30em;
+        margin-top: 30px;
+        padding: 10em;
+        background-color: #232323;
+        padding: 8px 6px;
+        width: 20em;
+        font-size: 18px;
+    }
+
+    /* Sign-Up button */
+
+    form button {
+        border-radius: 0px;
+        border: solid black 0px;
+        margin-left: 1em;
+        padding: 11px 3px;
+        font-size: 15px;
+        width: 8em;
+        background-color: white;
+        color: #232323;
+    }
+
+    /* Hier beginnen de checkboxes voor desktop. Deze zijn verscholen en dus niet te zien op de mobile versie doormiddel van display none*/
+
+    article form label {
+        display: inline-block;
+        position: relative;
+        list-style-type: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 25px 10px;
+        padding-top: 5px;
+        padding-bottom: 40px;
+        margin-bottom: 12px;
+        margin-left: 10em;
+        cursor: pointer;
+        font-size: 15px;
+        width: 8em;
+    }
+
+    /* Hier eindigt het formulier met het inputveld voor het e-mail adres en de sign-sup button*/
+
+
+    /* Dit gaat over 4 rijtjes met columns in de footer*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    footer div div {
+        float: left;
+        width: 22em;
+        padding: 10px;
+        height: 300px;
+        display: inline-block;
+        align-items: center;
+    }
+
+    footer div div a {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: auto;
+        text-align: center;
+        font-size: 13px;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* Dit gaat over de a'tjes in de footer*/
+    footer a {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: auto;
+        text-align: center;
+        font-size: 13px;
+        color: black;
+        cursor: pointer;
+    }
+
+    /* Dit gaat over de h2'tjes binnen in de div in de footer*/
+
+    footer div h2 {
+        text-align: center;
+    }
+
+
+    footer img {
+        width: 35px;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    footer section {
+        justify-content: center;
+        margin-left: 13em;
+    }
+
+
+    main section h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+
+    main section a {
+        margin-left: 41em;
+    }
+
+    main section dl {
+        margin-left: 1em;
+        margin-right: 1em;
+        font-family: omnes;
+        text-align: center;
+    }
+
+    main section dd {
+        margin-left: 27em;
+        margin-right: 27em;
+        font-family: omnes;
+        text-align: center;
+    }
+    
+    main section img {
+        width: 100%;
+    }
+}
+
